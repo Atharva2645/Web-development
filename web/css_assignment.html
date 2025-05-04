@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Assignments</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .heading {
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      padding: 20px 40px;
+      border-radius: 20px;
+      color: white;
+      font-size: 2.7rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      letter-spacing: 1px;
+    }
+
+    .assignments {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .assignment {
+      background: linear-gradient(135deg, #ffffffaa, #d3d3d360);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .assignment:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      border-color: #2193b0;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    }
+
+    .assignment img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease;
+    }
+
+    .assignment:hover img {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    @media (max-width: 500px) {
+      .heading {
+        font-size: 2rem;
+        padding: 15px 25px;
+      }
+
+      .assignment {
+        font-size: 1rem;
+        padding: 16px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="heading">CSS Assignments</div>
+
+  <div class="assignments">
+    <a class="assignment" href="external.html" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS Icon">
+      EXTERNAL CSS
+    </a>
+
+    <a class="assignment" href="formstyle.html" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS Icon">
+      EMPLOYEE REGISTRATION FORM
+    </a>
+
+    <a class="assignment" href="resumestyle.html" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS Icon">
+      RESUME
+    </a>
+
+    <a class="assignment" href="timetablestyle.html" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS Icon">
+      TIME TABLE
+    </a>
+  </div>
+
+</body>
+</html>
