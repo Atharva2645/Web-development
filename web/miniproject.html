@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Divine Krishna - The Supreme Personality of Godhead</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Global Styles */
+      :root {
+        --peacock-blue: #1a6f8a;
+        --krishna-blue: #2a52be;
+        --golden-yellow: #ffd700;
+        --lotus-pink: #f4c2c2;
+        --dark-blue: #0f056b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f9f5f0;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      header {
+        background: linear-gradient(135deg, var(--dark-blue), var(--krishna-blue));
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo i {
+        font-size: 2rem;
+        color: var(--golden-yellow);
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: var(--golden-yellow);
+      }
+
+      /* Hero Section */
+      .hero {
+        background-color: #2f7ed8;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        max-width: 600px;
+      }
+
+      .hero-content h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--golden-yellow);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--golden-yellow);
+        color: var(--dark-blue);
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* About Section */
+      .about {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--dark-blue);
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--golden-yellow);
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .about-img {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .about-img:hover img {
+        transform: scale(1.05);
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        color: var(--krishna-blue);
+        margin-bottom: 20px;
+      }
+
+      .about-text p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      /* Teachings Section */
+      .teachings {
+        padding: 80px 0;
+        background-color: #f5f5f5;
+      }
+
+      .teachings-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .teaching-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .teaching-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .teaching-img {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .teaching-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .teaching-card:hover .teaching-img img {
+        transform: scale(1.1);
+      }
+
+      .teaching-content {
+        padding: 25px;
+      }
+
+      .teaching-content h3 {
+        font-size: 1.5rem;
+        color: var(--dark-blue);
+        margin-bottom: 15px;
+      }
+
+      .teaching-content p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .read-more {
+        color: var(--krishna-blue);
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .read-more i {
+        margin-left: 5px;
+        transition: transform 0.3s;
+      }
+
+      .read-more:hover i {
+        transform: translateX(5px);
+      }
+
+      /* Gallery Section */
+      .gallery {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .gallery-item {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        height: 250px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 82, 190, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 10px;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay i {
+        color: white;
+        font-size: 2rem;
+      }
+
+      /* Quotes Section */
+      .quotes {
+        padding: 80px 0;
+        background: linear-gradient(
+            rgba(54, 159, 177, 0.7),
+            rgba(52, 49, 226, 0.7)
+          ),
+          url("images/quotes.jpg") no-repeat center center/cover;
+        color: white;
+        text-align: center;
+      }
+
+      .quote-slider {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .quote {
+        padding: 0 20px;
+      }
+
+      .quote i {
+        font-size: 3rem;
+        color: var(--golden-yellow);
+        margin-bottom: 20px;
+      }
+
+      .quote p {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .quote-author {
+        font-size: 1.2rem;
+        color: var(--golden-yellow);
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, var(--dark-blue), var(--krishna-blue));
+        color: white;
+        padding: 50px 0 20px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--golden-yellow);
+      }
+
+      .footer-column p {
+        margin-bottom: 15px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--golden-yellow);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .social-links a:hover {
+        background: var(--golden-yellow);
+        color: var(--dark-blue);
+        transform: translateY(-5px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+        }
+
+        nav ul {
+          margin-top: 20px;
+        }
+
+        nav ul li {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        .hero-content h2 {
+          font-size: 2.5rem;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about-img,
+        .about-text {
+          flex: none;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo h1 {
+          font-size: 1.5rem;
+        }
+
+        nav ul li {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+        .hero-content h2 {
+          font-size: 2rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <i class="fas fa-lotus"></i>
+          <h1>Divine Krishna</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#teachings">Teachings</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Lord Krishna</h2>
+          <p>
+            The Supreme Personality of Godhead, the embodiment of love,
+            compassion, and divine wisdom. His teachings in the Bhagavad Gita
+            continue to guide humanity towards righteousness and spiritual
+            enlightenment.
+          </p>
+          <a href="#about" class="btn">Explore More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Lord Krishna</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-img">
+            <img src="https://preview.redd.it/2swwyhza1nb51.jpg?auto=webp&s=e38eee45932de76a82a571739a9cac8699309e8f" alt="Lord Krishna" />
+          </div>
+          <div class="about-text">
+            <h3>The Eighth Avatar of Lord Vishnu</h3>
+            <p>
+              Lord Krishna, born in Mathura to Devaki and Vasudeva, is one of
+              the most revered and worshipped deities in Hinduism. He is
+              considered the eighth avatar of Lord Vishnu and played a central
+              role in the Mahabharata.
+            </p>
+            <p>
+              Krishna's childhood was spent in Vrindavan, where he performed
+              numerous miracles and divine acts (leelas) with his devotees,
+              especially the gopis (cowherd maidens) and his beloved Radha.
+            </p>
+            <p>
+              As a young prince, Krishna established the city of Dwarka and
+              became the charioteer and guide to Arjuna in the Kurukshetra war,
+              delivering the timeless wisdom of the Bhagavad Gita.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teachings Section -->
+    <section class="teachings" id="teachings">
+      <div class="container">
+        <div class="section-title">
+          <h2>Divine Teachings</h2>
+        </div>
+        <div class="teachings-grid">
+          <div class="teaching-card">
+            <div class="teaching-img">
+              <img src="https://www.iskconbooks.com/wp-content/uploads/2020/10/Eng-cvr-Bhagavad-gita.jpg" alt="Bhagavad Gita" />
+            </div>
+            <div class="teaching-content">
+              <h3>Bhagavad Gita</h3>
+              <p>
+                The sacred dialogue between Lord Krishna and Arjuna on the
+                battlefield of Kurukshetra, encompassing the essence of duty,
+                righteousness, and devotion.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-img">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg9umJ-PTTQy6PV_DanpZggC5lW69FCdvNeQ&s" alt="Dharma" />
+            </div>
+            <div class="teaching-content">
+              <h3>Path of Dharma</h3>
+              <p>
+                Krishna emphasizes the importance of following one's dharma
+                (duty) with dedication and without attachment to the results of
+                actions.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-img">
+              <img src="https://www.yogabasics.com/yogabasics2017/wp-content/uploads/2010/06/The-Bhagavad-Gita.jpg" alt="Bhakti Yoga" />
+            </div>
+            <div class="teaching-content">
+              <h3>Bhakti Yoga</h3>
+              <p>
+                The path of devotion, where Krishna teaches that pure,
+                selfless love and surrender to the Divine is the highest form of
+                spiritual practice.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <h2>Divine Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/k391w280/poster/h/j/e/large-lord-krishna-god-wall-poster-waterproof-vinyl-sticker-original-imafmfhsqbrghshh.jpeg?q=90&crop=false" alt="Krishna 1" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/66/6a/72/666a72b1f906d19d539b0649c459fb4f.jpg" alt="Krishna 2" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://mrwallpaper.com/images/thumbnail/iskcon-krishna-with-dark-skin-c0f1mcj03iq94rkx.jpg" alt="Krishna 3" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJHLHg11WydnkDnXC99aEhOf6guL2bdB1Sw&s" alt="Krishna 4" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section class="quotes" id="quotes">
+      <div class="container">
+        <div class="section-title">
+          <h2>Divine Quotes</h2>
+        </div>
+        <div class="quote-slider">
+          <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              You have the right to perform your prescribed duties, but you are
+              not entitled to the fruits of your actions.
+            </p>
+            <div class="quote-author">- Bhagavad Gita 2.47</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+          
+  </body>
+</html>
